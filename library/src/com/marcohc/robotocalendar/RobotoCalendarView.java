@@ -25,6 +25,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
@@ -462,6 +463,14 @@ public class RobotoCalendarView extends LinearLayout {
             // Extract day selected
             ViewGroup dayOfMonthContainer = (ViewGroup) view;
             String tagId = (String) dayOfMonthContainer.getTag();
+
+            Toast.makeText(context.getApplicationContext(), tagId, Toast.LENGTH_SHORT);
+
+            if (robotoCalendarListener == null) {
+                throw new IllegalStateException("You must assing a valid RobotoCalendarListener first!");
+            }
+
+            /*
             tagId = tagId.substring(DAY_OF_MONTH_CONTAINER.length(), tagId.length());
             TextView dayOfMonthText = (TextView) view.findViewWithTag(DAY_OF_MONTH_TEXT + tagId);
 
@@ -474,7 +483,7 @@ public class RobotoCalendarView extends LinearLayout {
                 throw new IllegalStateException("You must assing a valid RobotoCalendarListener first!");
             } else {
                 robotoCalendarListener.onDateSelected(calendar.getTime());
-            }
+            }*/
         }
     };
 }

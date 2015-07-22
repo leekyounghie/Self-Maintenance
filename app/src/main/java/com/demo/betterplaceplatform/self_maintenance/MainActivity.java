@@ -7,9 +7,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.demo.betterplaceplatform.self_maintenance.carchoice.Maint_List_Activity;
+import com.demo.betterplaceplatform.self_maintenance.push.logic.InstanceIdHelper;
+import com.demo.betterplaceplatform.self_maintenance.push.model.SenderCollection;
 
 public class MainActivity extends ActionBarActivity {
-
+    private InstanceIdHelper mInstanceIdHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +19,10 @@ public class MainActivity extends ActionBarActivity {
         Intent intentSubActivity =
                 new Intent(MainActivity.this, Maint_List_Activity.class);
         startActivity(intentSubActivity);
+
+        mInstanceIdHelper = new InstanceIdHelper(getApplicationContext());
+        mInstanceIdHelper.getGcmTokenInBackground(SenderCollection.DEFAULT_SENDER_ID);
+
     }
 
     @Override

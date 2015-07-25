@@ -63,6 +63,7 @@ public class CarRepairMapActivity extends FragmentActivity implements OnMapReady
                 Intent intentSubActivity =
                         new Intent(getApplicationContext(), Calandar_Activity.class);
                 startActivity(intentSubActivity);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 Toast.makeText(getApplicationContext(), marker.getTitle(), Toast.LENGTH_SHORT).show();
                 return false;
             }

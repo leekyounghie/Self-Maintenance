@@ -1,12 +1,9 @@
 package com.demo.betterplaceplatform.self_maintenance.carchoice;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-
-import com.demo.betterplaceplatform.self_maintenance.carrepairmap.CarRepairMapActivity;
 
 import java.util.ArrayList;
 
@@ -46,9 +43,7 @@ public class CarListAdapter extends BaseAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentSubActivity =
-                        new Intent(mContext, CarRepairMapActivity.class);
-                mContext.startActivity(intentSubActivity);
+                ((Maint_List_Activity) mContext).onStartNextActivity();
             }
         });
         return view;

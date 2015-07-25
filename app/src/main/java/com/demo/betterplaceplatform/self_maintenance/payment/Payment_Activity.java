@@ -1,29 +1,24 @@
-package com.demo.betterplaceplatform.self_maintenance;
+package com.demo.betterplaceplatform.self_maintenance.payment;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.demo.betterplaceplatform.self_maintenance.carchoice.Maint_List_Activity;
+import com.demo.betterplaceplatform.self_maintenance.R;
 
-public class MainActivity extends ActionBarActivity {
+public class Payment_Activity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Intent intentSubActivity =
-                new Intent(MainActivity.this, Maint_List_Activity.class);
-        startActivity(intentSubActivity);
-        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+        setContentView(R.layout.activity_payment);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_payment, menu);
         return true;
     }
 

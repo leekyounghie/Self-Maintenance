@@ -217,7 +217,8 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
 
         OneDayView ov = (OneDayView) v;
         HLog.d(TAG, CLASS, "click " + ov.get(Calendar.MONTH) + "/" + ov.get(Calendar.DAY_OF_MONTH));
-        HLog.d("머지", "머야", "여기가 맞지?");
+
+        ((Calandar_Activity) mContext).onStartNextActivity();
 
     }
 }

@@ -1,5 +1,6 @@
 package com.demo.betterplaceplatform.self_maintenance.carchoice;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -7,6 +8,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.demo.betterplaceplatform.self_maintenance.R;
+import com.demo.betterplaceplatform.self_maintenance.carrepairmap.CarRepairMapActivity;
 
 import java.util.ArrayList;
 
@@ -45,6 +47,12 @@ public class Maint_List_Activity extends ActionBarActivity {
         return items;
     }
 
+
+    public void onStartNextActivity() {
+        Intent intent = new Intent(this, CarRepairMapActivity.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -1,104 +1,104 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="7dp"
-    android:layout_marginRight="7dp"
-    tools:context="com.demo.betterplaceplatform.self_maintenance.toolsraental.CarToolsRantal">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                tools:context="com.demo.betterplaceplatform.self_maintenance.toolsraental.CarToolsRantal">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="47dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:layout_marginTop="7dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/left_01"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="1dp"
-                android:layout_weight="1"
-                android:background="#ffe5ffff"
-                android:gravity="center"
-                android:text="1번 리프트"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/left_02"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_weight="1"
-                android:background="#ffe5ffff"
-                android:gravity="center"
-                android:text="2번 리프트"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/left_03"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="1dp"
-                android:layout_weight="1"
-                android:background="#ffe5ffff"
-                android:gravity="center"
-                android:text="3번 리프트"
-                android:textSize="17dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="430dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <ListView
-                android:id="@+id/setLiftChoice_01"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="1dp"
-                android:layout_weight="1"></ListView>
-
-
-            <ListView
-                android:id="@+id/setLiftChoice_02"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_weight="1"></ListView>
-
-
-            <ListView
-                android:id="@+id/setLiftChoice_03"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="1dp"
-                android:layout_weight="1"></ListView>
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/left_01"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="13dp"
-            android:orientation="vertical">
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="#ffff498c"
+            android:gravity="center"
+            android:text="1번 리프트"
+            android:textColor="#ffffffff"
+            android:textSize="17dp"/>
 
-            <Button
-                android:id="@+id/Payment"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="#ff00ff00"
-                android:gravity="center"
-                android:text="결     제"
-                android:textSize="26dp" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/left_02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="#ffff498c"
+            android:gravity="center"
+            android:text="2번 리프트"
+            android:textColor="#ffffffff"
+            android:textSize="17dp"/>
 
+        <TextView
+            android:id="@+id/left_03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="#ffff498c"
+            android:gravity="center"
+            android:text="3번 리프트"
+            android:textColor="#ffffffff"
+            android:textSize="17dp"/>
     </LinearLayout>
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_above="@+id/Payment"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/setLiftChoice_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"></ListView>
+
+
+        <ListView
+            android:id="@+id/setLiftChoice_02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"></ListView>
+
+
+        <ListView
+            android:id="@+id/setLiftChoice_03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"></ListView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Payment"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="7dp"
+        android:background="#ffff498c"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="결     제"
+        android:textColor="#ffffffff"
+        android:textSize="26dp"/>
+
+</RelativeLayout>

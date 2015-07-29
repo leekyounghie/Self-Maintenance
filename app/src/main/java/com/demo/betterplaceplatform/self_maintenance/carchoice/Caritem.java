@@ -8,11 +8,13 @@ public class Caritem {
     int CarPicture;
     String PartName;
     String Price;
+    String Described;
 
-    public Caritem(int carPicture, String partName, String price) {
+    public Caritem(int carPicture, String partName, String price, String Described) {
         CarPicture = carPicture;
         PartName = partName;
         Price = price;
+        this.Described = Described;
     }
 
     public int getCarPicture() {
@@ -37,5 +39,13 @@ public class Caritem {
 
     public void setPrice(String price) {
         Price = price;
+    }
+
+    public String getDescribed() {
+        return Described;
+    }
+
+    public void setDescribed(String Described) {
+        this.Described = Described;
     }
 }

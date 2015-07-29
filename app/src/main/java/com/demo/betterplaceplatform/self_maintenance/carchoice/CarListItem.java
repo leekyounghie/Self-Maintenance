@@ -17,7 +17,7 @@ public class CarListItem extends LinearLayout {
 
     Context mContext;
     ImageView PartImage;
-    TextView PartName, PartPrice, textView03;
+    TextView PartName, PartPrice, Described;
 
     public CarListItem(Context context) {
         super(context);
@@ -36,7 +36,7 @@ public class CarListItem extends LinearLayout {
         PartImage = (ImageView) view.findViewById(R.id.PartImage);
         PartName = (TextView) view.findViewById(R.id.text01);
         PartPrice = (TextView) view.findViewById(R.id.text02);
-        textView03 = (TextView) view.findViewById(R.id.text03);
+        Described = (TextView) view.findViewById(R.id.text03);
     }
 
     public void setCarItem(Caritem item) {
@@ -49,5 +49,8 @@ public class CarListItem extends LinearLayout {
 
         String CarPrice = item.getPrice();
         PartPrice.setText(CarPrice);
+
+        String CarDescribed = item.getDescribed();
+        Described.setText(CarDescribed);
     }
 }
